@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
 
-import 'footer.dart'; // footer.dart をインポート
-import 'header.dart'; // <- header.dart を インポート
+void main() => runApp(MyApp());
 
-void main() => runApp(App());
-
-class App extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // <- Debug の 表示を OFF
+      title: 'Welcome to Flutter',
       home: Scaffold(
-        appBar: Header(),
-        body: Center(child: Text("なんでやねん")), // <- Text の位置を指定
-        bottomNavigationBar: Footer(),
+        appBar: AppBar(
+          title: const Text('Welcome to Flutter'),
+        ),
+        body: const Center(
+          child: const Text('Hello World'),
+        ),
       ),
     );
-  }
-}
-
-class FirstPage extends StatelessWidget{
-  Widget build(BuildContext context
   }
 }
